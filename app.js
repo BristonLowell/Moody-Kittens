@@ -21,6 +21,9 @@ if (kittens.length >= maxKittens){
 else if (form.name.value == ""){
   alert("You must enter a name")
 }
+else if (findKittenByName(form.name.value)){
+  alert("You must enter a new Kitten")
+}
 else {
   let kitten = {
     id: generateId(),
@@ -80,6 +83,10 @@ function drawKittens() {
  */
 function findKittenById(id) {
   return kittens.find(k => k.id == id);
+}
+
+function findKittenByName(name) {
+  return kittens.find(k => k.name == name);
 }
 
 /**
