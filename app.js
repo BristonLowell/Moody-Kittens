@@ -184,13 +184,11 @@ function generateId() {
 }
 
 function removeKitten(id) {
-  console.log(id)
+  // console.log(id)
   let index = kittens.findIndex(kitten => kitten.id == id)
-  if (index == -1) {
-    throw new Error("Invalid ID")
-  }
   kittens.splice(index, 1)
   saveKittens()
 }
+
 
 delKittensButton()
